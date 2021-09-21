@@ -78,9 +78,10 @@ hr {
     align-items: center;
 }
 
-#banner > * {
+#banner > div > * {
     color: white;
     text-align: center;
+    margin-bottom: 3vh;
 }
 
 #introduction {
@@ -89,6 +90,10 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#intro-wrapper {
+    width: 60%;
 }
 
 #intro-text {
@@ -112,11 +117,18 @@ hr {
     text-align: center;
 }
 
+
 #tour-dates {
     color: white;
     display: flex;
     flex-direction: column;
     padding: 1.25em;
+    justify-content: center;
+    align-items: center;
+}
+
+#tour-wrapper {
+    width: 60%;
 }
 
 #tour-desc {
@@ -154,11 +166,11 @@ hr {
 }
 
 #remaining-tix {
-    padding: 1vw;
+    padding: 1%;
     color: white;
     background-color: black;
-    height: 5vw;
-    width: 5vw;
+    height: 100%;
+    width: 10%;
     border-radius: 50%;
     float: right;
     text-align: center;
@@ -179,23 +191,29 @@ hr {
 
 .buy-btn {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    width: 20vw;
+    width: 50%;
+    height: 10%;
     background-color: black;
     color: white;
-    margin: 1vw 0 3vw 3vw;
-    text-align: center;
-}
-
-#contact-wrapper {
-    padding: 1.25em;
-    padding-top: 10vh;
+    margin: 0 0 1vw 1.5vw;
 }
 
 #contact-section {
     margin-top: 10vh;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-wrapper {
+    padding: 1.25em;
+    padding-top: 10vh;
+    width: 60%;
 }
 
 #contact-desc {
@@ -208,6 +226,11 @@ hr {
     margin: 3vh 0 5vh 0;
 }
 
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
 #contact-info > * {
     margin-bottom: 1.5vh;
 }
@@ -216,12 +239,12 @@ hr {
     margin-right: 3vw;
 }
 
-#form > input {
+#fields > input {
     height: 4vh;
     padding: 1vw;
 }
 
-#form input:nth-of-type(3) {
+#fields input:nth-of-type(3) {
     margin: 1vh 0 2vh 0;
 }
 
@@ -275,6 +298,12 @@ hr {
     margin-bottom: 3vw;
 }
 
+@media (min-width: 500px) {
+    #remaining-tix {
+        max-width: 4vw;
+    }
+}
+
 @media (min-width: 1000px) {
     .desktop-elements, .desktop-elements > * {
         display: block;
@@ -299,9 +328,14 @@ hr {
 
     #purchase-tickets {
         flex-direction: row;
+        justify-content: space-between;
     }
 
     .concert-location {
-        margin: 0 1.5vw 3vw 1.5vw;
+        width: calc(100% / 3.2);
+    }
+
+    #contact-form {
+        flex-direction: row;
     }
 }
