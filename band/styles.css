@@ -1,0 +1,307 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+    --secondary-font-color: gray;
+}
+
+html, body {
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+#app {
+    /* padding: 15px; */
+    background-color: black;
+}
+
+.desktop-elements, .desktop-elements > * {
+    display: none;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+li { 
+    list-style-type: none;
+}
+
+header ul li {
+    margin-right: 3vw;
+    display: inherit;
+}
+
+h1 {
+    letter-spacing: 1vw;
+    font-size: 2em;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.emphasis {
+    color: var(--secondary-font-color);
+}
+
+.section {
+    margin-bottom: 12vh;
+}
+
+#nav, #nav > * {
+    display: flex;
+    flex-direction: row;
+    margin-right: 3vw;
+}
+
+#banner {
+    /* background-image: url(images/chicago.jpg); */
+    background: url('images/chicago.jpg') no-repeat;    
+    background-size: cover;
+    height: 45vw;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#banner > * {
+    color: white;
+    text-align: center;
+}
+
+#introduction {
+    background-color: white;
+    padding: 1.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#intro-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 9vh 0 7vh 0;
+}
+
+#intro-text > * {
+    margin-bottom: 3.5vw;
+}
+
+#band-members {
+    display: flex;
+    flex-direction: column;
+}
+
+.band-imgs > * {
+    margin-bottom: 5vw;
+    text-align: center;
+}
+
+#tour-dates {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25em;
+}
+
+#tour-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tour-desc > * {
+    margin-bottom: 5vw;
+}
+
+#calendar-month {
+    width: 100%;
+    background-color: white;
+    color: rgba(0,0,0,0.6);
+}
+
+#calendar-month ul li{
+    padding: 2vw;
+}
+
+.sold-out {
+    background-color: rgba(240, 10, 10, 0.75);
+    padding: 1vw;
+    color: white;
+    margin-left: 3vw;
+}
+
+#purchase-tickets {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+#remaining-tix {
+    padding: 1vw;
+    color: white;
+    background-color: black;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    float: right;
+    text-align: center;
+    justify-content: center;
+}
+
+.concert-location {
+    background-color: white;
+    color: var(--primary-color);
+    margin-bottom: 3vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.concert-location > * {
+    padding: 1.5vw;
+}
+
+.buy-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
+    background-color: black;
+    color: white;
+    margin: 1vw 0 3vw 3vw;
+    text-align: center;
+}
+
+#contact-wrapper {
+    padding: 1.25em;
+    padding-top: 10vh;
+}
+
+#contact-section {
+    margin-top: 10vh;
+    background-color: white;
+}
+
+#contact-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-desc p {
+    margin: 3vh 0 5vh 0;
+}
+
+#contact-info > * {
+    margin-bottom: 1.5vh;
+}
+
+#contact-info p i {
+    margin-right: 3vw;
+}
+
+#form > input {
+    height: 4vh;
+    padding: 1vw;
+}
+
+#form input:nth-of-type(3) {
+    margin: 1vh 0 2vh 0;
+}
+
+#drop-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#drop-email input {
+    width: 100%;
+}
+
+#send-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: white;
+    margin-bottom: 7vh;
+}
+
+#send-btn span {
+    background-color: black;
+    padding: 1.5vw 2vw;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15vw;
+}
+
+#footer img {
+    margin-bottom: 10vw;
+}
+
+#footer i {
+    font-size: 1.5em;
+    color: var(--secondary-font-color);
+}
+
+#footer > * {
+    margin-bottom: 3vw;
+}
+
+@media (min-width: 1000px) {
+    .desktop-elements, .desktop-elements > * {
+        display: block;
+    }
+
+    .mobile-elements {
+        display: none;
+    }
+
+    #banner {
+        background: url('images/ny.jpg') no-repeat; 
+        background-size: cover;
+    }
+
+    #band-members {
+        flex-direction: row;
+    }
+
+    .band-imgs {
+        margin-right: 5vw;
+    }
+
+    #purchase-tickets {
+        flex-direction: row;
+    }
+
+    .concert-location {
+        margin: 0 1.5vw 3vw 1.5vw;
+    }
+}
